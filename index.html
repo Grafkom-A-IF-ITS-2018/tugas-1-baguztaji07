@@ -187,7 +187,7 @@
         gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer)
         gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, triangleVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0)
         setMatrixUniforms()
-        gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems)
+        gl.drawArrays(gl.TRIANGLES_STRIP, 0, triangleVertexPositionBuffer.numItems)
         mvPopMatrix()
         mat4.translate(mvMatrix, mvMatrix, [0.0, -3.0, 0.0])
         mvPushMatrix()
